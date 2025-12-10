@@ -2,9 +2,8 @@ using UnityEngine;
 
 public class ExitDoor : MonoBehaviour
 {
-    public GameObject winText;
+    public GameObject winScreen;
     public GameObject needKeyText;
-    public GameObject missionText;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,9 +14,8 @@ public class ExitDoor : MonoBehaviour
 
             if (KeyItem.hasKey)
             {
-                missionText.SetActive(false);
-                winText.SetActive(true);
-                Debug.Log("WinScreen set active: " + winText.activeSelf); 
+                winScreen.SetActive(true);
+                Debug.Log("WinScreen set active: " + winScreen.activeSelf); 
 
                 Time.timeScale = 0f;
             }
